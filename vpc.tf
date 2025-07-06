@@ -21,7 +21,7 @@ resource "aws_internet_gateway" "main" {
     var.aws_igw_tags,
     local.common_tags,
     {
-        Name = "${var.project}-${var.environment}"
+        Name = "${var.project}-${var.environment}-igw"
     }
   )
 }
@@ -98,7 +98,7 @@ resource "aws_nat_gateway" "main" {
     var.nat_gateway_tags,
     local.common_tags,
     {
-        Name = "${var.project}-${var.environment}"
+        Name = "${var.project}-${var.environment}-nat-gateway"
     }
   )
 
