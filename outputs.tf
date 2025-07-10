@@ -5,3 +5,7 @@ output "available_zones" {
 output "vpc_id" {
   value = aws_vpc.main.id
 }
+
+output "public_subnet_list" {
+  value = aws_subnet.public[*].id
+}
